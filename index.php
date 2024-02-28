@@ -8,20 +8,20 @@
     <title>Dischi</title>
     
 </head>
-<body class="vh-100" style="background-color: #1D2D3C;">
+<body  style="background-color: #1D2D3C; height: 100vh;">
     
     <div id="app">
        
-        <div class="container-fluid position-relative ">
+        <div class="container-fluid position-relative h-100">
             
             <div class="container">
-                <div class="row row-cols-3 g-5" >
+                <div class="row row-cols-3 g-3 mt-4" >
 
-                    <div class="col" v-for="(element,index) in myList" @click="listasingola(index)"  >
-                        <div class="p-3" style="background-color: #112030; cursor: pointer;" >
-                            <figure class="p-5">
+                    <div class="col px-2" v-for="(element,index) in myList" @click="listasingola(index)"  >
+                        <div class="py-2" style="background-color: #112030; cursor: pointer; border-radius: 10px;" >
+                            <figure class="pt-2 d-flex justify-content-center ">
 
-                                <img class="card-img-top" :src="element.poster" alt="">
+                                <img width="200px" :src="element.poster" alt="">
                             </figure>
                             <p class="text-light text-center">{{element.title}}</p>
                             <p class="text-light text-center">{{element.author}}</p>
@@ -39,7 +39,7 @@
             </div>
 
 
-            <div v-if="appari==true" class="position-absolute d-flex justify-content-center align-items-center"  style="width: 100%;height: 104vh; position: fixed; background-color: rgba(0, 0, 255, 0.535); top: 0;left: 0;">
+            <div v-if="appari==true" class="position-absolute d-flex justify-content-center align-items-center overflow-hidden"  style="width: 100%;height: 104vh; position: fixed; background-color: rgba(0, 0, 255, 0.535); top: 0;left: 0;">
                         
                         <div class="w-25 position-relative">  
                             <figure class="p-5 w-100 d-flex justify-content-center" >
