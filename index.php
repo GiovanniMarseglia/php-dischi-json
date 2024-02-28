@@ -17,7 +17,7 @@
             <div class="container">
                 <div class="row row-cols-3 g-5" >
 
-                    <div class="col" v-for="(element,index) in myList" @click="appari=!appari,listasingola(index)"  >
+                    <div class="col" v-for="(element,index) in myList" @click="listasingola(index)"  >
                         <div class="p-3" style="background-color: #112030; cursor: pointer;" >
                             <figure class="p-5">
 
@@ -42,13 +42,12 @@
             <div v-if="appari==true" class="position-absolute d-flex justify-content-center align-items-center"  style="width: 100%;height: 104vh; position: fixed; background-color: rgba(0, 0, 255, 0.535); top: 0;left: 0;">
                         <div class="w-25">  
                             <figure class="p-5 w-100 d-flex justify-content-center" >
-                                <img class="w-50"  src="https://images-na.ssl-images-amazon.com/images/I/51sBr4IWDwL.jpg" alt="">
+                                <img class="w-50" :src="singola.poster" alt="a">
                             </figure>
                             <div class="d-flex flex-column">
-
-                                <span class="text-center text-light h1">aaaaaaaaaaaaa</span>
-                                <span class="text-center text-light fs-7">aaaaaaaaaaaaa</span>
-                                <span class="text-center text-light h3">aaaaaaaaaaaaa</span>
+                                <span class="text-center text-light h1">{{singola.title}}</span>
+                                <span class="text-center text-light fs-7">{{singola.author}}</span>
+                                <span class="text-center text-light h3">{{singola.year}}</span>
 
                             </div>
                             

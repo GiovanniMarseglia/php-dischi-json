@@ -6,7 +6,8 @@
       return {
         myList:null,
         apiUrl:"server.php",
-        appari:false
+        appari:false,
+        singola:null
       }
     },
     mounted() {
@@ -23,7 +24,11 @@
             })
         },
         listasingola(index){
-
+            axios.get("newserver.php",{params:{inde: index}}).then((res) => {
+                this.singola=res.data
+                console.log(res.data)
+                this.appari=true
+})
         }
         
     },
