@@ -15,7 +15,7 @@
         <div class="container-fluid position-relative h-100">
             
             <div class="container">
-                <div class="row row-cols-3 g-3 mt-4" >
+                <div class="row row-cols-3 g-3 pt-4" >
 
                     <div class="col px-2" v-for="(element,index) in myList" @click="listasingola(index)"  >
                         <div class="py-2" style="background-color: #112030; cursor: pointer; border-radius: 10px;" >
@@ -39,11 +39,11 @@
             </div>
 
 
-            <div v-if="appari==true" class="position-absolute d-flex justify-content-center align-items-center overflow-hidden"  style="width: 100%;height: 104vh; position: fixed; background-color: rgba(0, 0, 255, 0.535); top: 0;left: 0;">
+            <div v-if="appari==true" class="position-absolute d-flex justify-content-center align-items-center overflow-hidden"  style="width: 100%;height: 100vh; position: fixed; background-color: #112031ce; top: 0;left: 0;">
                         
                         <div class="w-25 position-relative">  
                             <figure class="p-5 w-100 d-flex justify-content-center" >
-                                <img class="w-50" :src="singola.poster" alt="a">
+                                <img class="w-100" :src="singola.poster" alt="a">
                             </figure>
                             <div class="d-flex flex-column">
                                 <span class="text-center text-light h1">{{singola.title}}</span>
@@ -53,8 +53,8 @@
                             </div>
 
 
-                            <div class="position-absolute z-3" @click="appari=false" style="cursor: pointer; top: 32px; right: 125px;">
-                                <svg style="width: 25px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ff2929" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg>
+                            <div class="position-absolute z-3" @click="appari=false" style="cursor: pointer; top: 31px; right: 30px;">
+                                <svg style="width: 35px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ff2929" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg>
                             </div>
                             
                         </div>
